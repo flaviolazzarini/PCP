@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // {
+        //     "label": "build",
+        //     "type": "shell",
+        //     "command": "clang",
+        //     "args": [
+        //         "${file} stack.c",
+        //         "-o",
+        //         "${fileDirname}/${fileBasenameNoExtension}.out",
+        //         "--debug"
+        //     ]
+        // },
+        {
+            "type": "shell",
+            "label": "clang build active file",
+            "command": "clang",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out",
+                "-I./",
+                "-working-directory=${fileDirname}" 
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "clang build stack",
+            "command": "clang",
+            "args": [
+                "-g",
+                "main.c",
+                "stack.c",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

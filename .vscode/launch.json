@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch U1",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": [],
+        },
+        {
+            "name": "Launch C-Stack",
+            "type": "lldb",
+            "request": "launch",
+            "preLaunchTask": "clang build stack",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": [],
+        }
+    ]
+}
