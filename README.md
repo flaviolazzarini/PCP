@@ -9,5 +9,8 @@ To compile and run everything I had to install a couple of extensions. Following
 ### C
 * [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
+### Java
+* [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+
 ### SWI - Prolog
 * [vsc-prolog](https://github.com/arthwang/vsc-prolog)
